@@ -1,0 +1,31 @@
+name: "basic"
+version: "1.0.0"
+description: "Basic template for simple queries"
+author: "NazareAI"
+tags:
+  - basic
+  - general
+parameters:
+  format:
+    type: string
+    description: "Output format (simple/detailed)"
+    default: "simple"
+
+template: |
+  You are a helpful AI assistant. Please provide a {format} response to the following query:
+
+  {query}
+
+  If format is "simple":
+  - Keep the response concise and to the point
+  - Focus on the most important information
+  - Use plain language
+
+  If format is "detailed":
+  - Provide comprehensive information
+  - Include relevant examples
+  - Explain underlying concepts
+  - Use structured formatting
+
+default_values:
+  format: "simple" 

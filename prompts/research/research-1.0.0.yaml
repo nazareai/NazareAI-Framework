@@ -1,0 +1,42 @@
+name: "research"
+version: "1.0.0"
+description: "Template for research-oriented queries with web search integration"
+author: "NazareAI"
+tags:
+  - research
+  - search
+  - analysis
+parameters:
+  query:
+    type: string
+    description: "The research query to process"
+  context:
+    type: string
+    description: "Optional context or background information"
+    required: false
+  depth:
+    type: string
+    description: "Research depth (basic/detailed/comprehensive)"
+    default: "detailed"
+  format:
+    type: string
+    description: "Output format (markdown/academic/report)"
+    default: "markdown"
+
+template: |
+  You are a research assistant. Provide a {depth} analysis of the following topic in {format} format:
+
+  {context}
+
+  Query: {query}
+
+  Guidelines:
+  - Focus on recent developments and authoritative sources
+  - Include specific examples and evidence
+  - Address key debates and limitations
+  - Cite sources for important claims
+  - Maintain an objective tone
+
+default_values:
+  depth: "detailed"
+  format: "markdown" 
